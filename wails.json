@@ -1,0 +1,18 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "Q-Solver",
+  "outputfilename": "Q-Solver", 
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "info": {
+    "companyName": "Q-Solver Open Source",
+    "productName": "Q-Solver",
+    "productVersion": "1.0.3.0",
+    "copyright": "Copyright 2026 Q-Solver contributors.",
+    "comments": "Desktop AI assistant for screenshot-based problem solving",
+    "fileVersion": "1.0.3.0",
+    "fileDescription": "Q-Solver Desktop Application"
+  }
+}
