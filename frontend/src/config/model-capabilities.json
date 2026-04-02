@@ -1,4 +1,32 @@
 {
+  "glm-5v-turbo": {
+    "provider": "z-ai",
+    "name": "Z.ai: GLM 5V Turbo",
+    "description": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding, and task execution, and works seamlessly with agents to complete the full loop of “perceive → plan → execute“.",
+    "supports_image": true,
+    "context_length": 202752,
+    "inputs": [
+      "image",
+      "text",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "trinity-large-thinking": {
+    "provider": "arcee-ai",
+    "name": "Arcee AI: Trinity Large Thinking",
+    "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. It is free in open claw for the first five days. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7",
+    "supports_image": false,
+    "context_length": 262144,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "grok-4.20-multi-agent": {
     "provider": "x-ai",
     "name": "xAI: Grok 4.20 Multi-Agent",
@@ -85,7 +113,7 @@
     ]
   },
   "reka-edge": {
-    "provider": "reka",
+    "provider": "rekaai",
     "name": "Reka Edge",
     "description": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use.",
     "supports_image": true,
@@ -3184,7 +3212,7 @@
   },
   "reka-flash-3": {
     "provider": "rekaai",
-    "name": "Reka: Flash 3",
+    "name": "Reka Flash 3",
     "description": "Reka Flash 3 is a general-purpose, instruction-tuned large language model with 21 billion parameters, developed by Reka. It excels at general chat, coding tasks, instruction-following, and function calling. Featuring a 32K context length and optimized through reinforcement learning (RLOO), it provides competitive performance comparable to proprietary models within a smaller parameter footprint. Ideal for low-latency, local, or on-device deployments, Reka Flash 3 is compact, supports efficient quantization (down to 11GB at 4-bit precision), and employs explicit reasoning tags (\"<reasoning>\") to indicate its internal thought process.\n\nReka Flash 3 is primarily an English model with limited multilingual understanding capabilities. The model weights are released under the Apache 2.0 license.",
     "supports_image": false,
     "context_length": 65536,
@@ -3808,19 +3836,6 @@
       "text"
     ]
   },
-  "magnum-v4-72b": {
-    "provider": "anthracite-org",
-    "name": "Magnum v4 72B",
-    "description": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).",
-    "supports_image": false,
-    "context_length": 16384,
-    "inputs": [
-      "text"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
   "claude-3.5-sonnet": {
     "provider": "anthropic",
     "name": "Anthropic: Claude 3.5 Sonnet",
@@ -3831,6 +3846,19 @@
       "text",
       "image",
       "file"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "magnum-v4-72b": {
+    "provider": "anthracite-org",
+    "name": "Magnum v4 72B",
+    "description": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).",
+    "supports_image": false,
+    "context_length": 16384,
+    "inputs": [
+      "text"
     ],
     "outputs": [
       "text"
@@ -3862,10 +3890,10 @@
       "text"
     ]
   },
-  "inflection-3-pi": {
+  "inflection-3-productivity": {
     "provider": "inflection",
-    "name": "Inflection: Inflection 3 Pi",
-    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles.",
+    "name": "Inflection: Inflection 3 Productivity",
+    "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details.",
     "supports_image": false,
     "context_length": 8000,
     "inputs": [
@@ -3875,10 +3903,10 @@
       "text"
     ]
   },
-  "inflection-3-productivity": {
+  "inflection-3-pi": {
     "provider": "inflection",
-    "name": "Inflection: Inflection 3 Productivity",
-    "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details.",
+    "name": "Inflection: Inflection 3 Pi",
+    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles.",
     "supports_image": false,
     "context_length": 8000,
     "inputs": [
@@ -3914,6 +3942,19 @@
       "text"
     ]
   },
+  "llama-3.2-1b-instruct": {
+    "provider": "meta-llama",
+    "name": "Meta: Llama 3.2 1B Instruct",
+    "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/).",
+    "supports_image": false,
+    "context_length": 60000,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "llama-3.2-11b-vision-instruct": {
     "provider": "meta-llama",
     "name": "Meta: Llama 3.2 11B Vision Instruct",
@@ -3923,19 +3964,6 @@
     "inputs": [
       "text",
       "image"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
-  "llama-3.2-1b-instruct": {
-    "provider": "meta-llama",
-    "name": "Meta: Llama 3.2 1B Instruct",
-    "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/).",
-    "supports_image": false,
-    "context_length": 60000,
-    "inputs": [
-      "text"
     ],
     "outputs": [
       "text"
@@ -4047,12 +4075,12 @@
       "text"
     ]
   },
-  "llama-3.1-70b-instruct": {
+  "llama-3.1-8b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3.1 70B Instruct",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
+    "name": "Meta: Llama 3.1 8B Instruct",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
     "supports_image": false,
-    "context_length": 131072,
+    "context_length": 16384,
     "inputs": [
       "text"
     ],
@@ -4060,12 +4088,12 @@
       "text"
     ]
   },
-  "llama-3.1-8b-instruct": {
+  "llama-3.1-70b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3.1 8B Instruct",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
+    "name": "Meta: Llama 3.1 70B Instruct",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
     "supports_image": false,
-    "context_length": 16384,
+    "context_length": 131072,
     "inputs": [
       "text"
     ],
@@ -4086,9 +4114,9 @@
       "text"
     ]
   },
-  "gpt-4o-mini": {
+  "gpt-4o-mini-2024-07-18": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o-mini",
+    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
     "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal",
     "supports_image": true,
     "context_length": 128000,
@@ -4101,9 +4129,9 @@
       "text"
     ]
   },
-  "gpt-4o-mini-2024-07-18": {
+  "gpt-4o-mini": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+    "name": "OpenAI: GPT-4o-mini",
     "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal",
     "supports_image": true,
     "context_length": 128000,
@@ -4198,10 +4226,10 @@
       "text"
     ]
   },
-  "llama-3-70b-instruct": {
+  "llama-3-8b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3 70B Instruct",
-    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
+    "name": "Meta: Llama 3 8B Instruct",
+    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
     "supports_image": false,
     "context_length": 8192,
     "inputs": [
@@ -4211,10 +4239,10 @@
       "text"
     ]
   },
-  "llama-3-8b-instruct": {
+  "llama-3-70b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3 8B Instruct",
-    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
+    "name": "Meta: Llama 3 70B Instruct",
+    "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
     "supports_image": false,
     "context_length": 8192,
     "inputs": [
@@ -4291,12 +4319,12 @@
       "text"
     ]
   },
-  "gpt-3.5-turbo-0613": {
+  "gpt-4-turbo-preview": {
     "provider": "openai",
-    "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "name": "OpenAI: GPT-4 Turbo Preview",
+    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023.\n\n**Note:** heavily rate limited by OpenAI while in preview.",
     "supports_image": false,
-    "context_length": 4095,
+    "context_length": 128000,
     "inputs": [
       "text"
     ],
@@ -4304,12 +4332,12 @@
       "text"
     ]
   },
-  "gpt-4-turbo-preview": {
+  "gpt-3.5-turbo-0613": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4 Turbo Preview",
-    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023.\n\n**Note:** heavily rate limited by OpenAI while in preview.",
+    "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "supports_image": false,
-    "context_length": 128000,
+    "context_length": 4095,
     "inputs": [
       "text"
     ],
@@ -4374,12 +4402,12 @@
       "text"
     ]
   },
-  "mistral-7b-instruct-v0.1": {
-    "provider": "mistralai",
-    "name": "Mistral: Mistral 7B Instruct v0.1",
-    "description": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.",
+  "gpt-3.5-turbo-instruct": {
+    "provider": "openai",
+    "name": "OpenAI: GPT-3.5 Turbo Instruct",
+    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
     "supports_image": false,
-    "context_length": 2824,
+    "context_length": 4095,
     "inputs": [
       "text"
     ],
@@ -4387,12 +4415,12 @@
       "text"
     ]
   },
-  "gpt-3.5-turbo-instruct": {
-    "provider": "openai",
-    "name": "OpenAI: GPT-3.5 Turbo Instruct",
-    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
+  "mistral-7b-instruct-v0.1": {
+    "provider": "mistralai",
+    "name": "Mistral: Mistral 7B Instruct v0.1",
+    "description": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.",
     "supports_image": false,
-    "context_length": 4095,
+    "context_length": 2824,
     "inputs": [
       "text"
     ],
@@ -4452,6 +4480,19 @@
       "text"
     ]
   },
+  "gpt-4-0314": {
+    "provider": "openai",
+    "name": "OpenAI: GPT-4 (older v0314)",
+    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
+    "supports_image": false,
+    "context_length": 8191,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "gpt-4": {
     "provider": "openai",
     "name": "OpenAI: GPT-4",
@@ -4471,19 +4512,6 @@
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "supports_image": false,
     "context_length": 16385,
-    "inputs": [
-      "text"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
-  "gpt-4-0314": {
-    "provider": "openai",
-    "name": "OpenAI: GPT-4 (older v0314)",
-    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
-    "supports_image": false,
-    "context_length": 8191,
     "inputs": [
       "text"
     ],
