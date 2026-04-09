@@ -1377,7 +1377,7 @@
     "name": "MoonshotAI: Kimi K2 Thinking",
     "description": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
     "supports_image": false,
-    "context_length": 131072,
+    "context_length": 262144,
     "inputs": [
       "text"
     ],
@@ -1959,7 +1959,7 @@
     "name": "MoonshotAI: Kimi K2 0905",
     "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32...",
     "supports_image": false,
-    "context_length": 131072,
+    "context_length": 262144,
     "inputs": [
       "text"
     ],
